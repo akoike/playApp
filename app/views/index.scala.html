@@ -1,7 +1,7 @@
-@import models.Test
-@(test: Test)
+@(message: String)
 
-名前：@(test.name)
-<br/>
-年齢：@(test.age)
+@main("Welcome to Play") {
 
+    @play20.welcome(message, style = "Java")
+
+}
