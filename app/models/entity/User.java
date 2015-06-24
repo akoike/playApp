@@ -4,10 +4,7 @@ import com.avaje.ebean.annotation.CreatedTimestamp;
 import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Version;
-import javax.validation.Constraint;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.Date;
 
@@ -18,6 +15,7 @@ import java.util.Date;
 public class User extends Model {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     public long id;
 
     @Constraints.Required
@@ -31,9 +29,11 @@ public class User extends Model {
     public SexType sex;
 
     @CreatedTimestamp
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Date createDate;
 
     @Version
+    @GeneratedValue(strategy = GenerationType.AUTO)
     public Date updateDate;
 
     public static Finder<Long, User> find = new Finder<Long, User>(Long.class, User.class);

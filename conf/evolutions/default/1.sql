@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table user (
-  id                        bigint not null,
+  id                        bigint auto_increment not null,
   name                      varchar(255) not null,
   age                       integer not null,
   sex                       integer not null,
@@ -13,8 +13,6 @@ create table user (
   constraint ck_user_sex check (sex in (0,1)),
   constraint pk_user primary key (id))
 ;
-
-create sequence user_seq;
 
 
 
@@ -26,6 +24,4 @@ SET REFERENTIAL_INTEGRITY FALSE;
 drop table if exists user;
 
 SET REFERENTIAL_INTEGRITY TRUE;
-
-drop sequence if exists user_seq;
 
