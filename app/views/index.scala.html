@@ -1,9 +1,7 @@
-@import models.entity.User
-@(user: User)
-@if(user != null){
-@(user.name)<br/>
-@(user.age)<br/>
-@(user.sex.getSexType())<br/>
-}else{
-NULL!!
+@(message: String)
+
+@main("Welcome to Play") {
+
+    @play20.welcome(message, style = "Java")
+
 }

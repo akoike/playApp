@@ -13,8 +13,8 @@ import java.util.List;
 public class Application extends Controller {
 
     public static Result index() {
-        Query<User> user = User.find.where("age='30'");
-        return ok(index.render(user.findUnique()));
+//        Query<User> user = User.find.where("age='30'");
+        return ok(index.render("Your new application is ready."));
     }
 
 }
