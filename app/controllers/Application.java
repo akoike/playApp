@@ -24,7 +24,8 @@ public class Application extends Controller {
 //                .workOfficeWorker()
 //                .hobby("", "")
 //                .selfIntroduction();
-        String selfIntroduction = UserInfoBuilder.builder().lastName("").firstName("").age(28).sexMan().workOfficeWorker().hobby("", "").selfIntroduction();
+//        String selfIntroduction = UserInfoBuilder.builder().lastName("").firstName("").age(28).sexMan().workOfficeWorker().hobby("", "").selfIntroduction();
+//        return null;
     }
 
 }
