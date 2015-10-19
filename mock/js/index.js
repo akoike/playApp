@@ -1,8 +1,8 @@
 $(function(){
 
-$("#b3").on("click",function(){
-    alert("Hello jQuery!!");
-});
+  $("#b3").on("click",function(){
+      alert("Hello jQuery!!");
+  });
 
 });
 
